@@ -341,21 +341,21 @@ Metadata:
 Parameters:
   InstanceTypeParameter:
     Type: String
-    Default: t2.micro
+    Default: t3.micro
     AllowedValues:
-      - t2.micro
-      - t2.small
-      - t2.medium
+      - t3.micro
+      - t3.small
+      - t3.medium
     Description: >-
-      Enter the instance size. Default is t2.micro, the only free-tier eligible
+      Enter the instance size. Default is t3.micro, the only free-tier eligible
       size.
   KeyNameParameter:
     Type: String
     Description: Enter the keyname of your private key
   DiscSizeParameter:
     Type: Number
-    Default: 30
-    MinValue: 30
+    Default: 120
+    MinValue: 60
     Description: >-
       Size of the server hard drive in GB. 30 is the largest size that is free-tier eligible
   VPCCIDRParameter:
@@ -484,7 +484,7 @@ Resources:
     Properties:
       KeyName:
         Ref: KeyNameParameter
-      ImageId: ami-0ae930fa924b34ed3
+      ImageId: ami-06973b278573729cc
       InstanceType:
         Ref: InstanceTypeParameter
       SecurityGroupIds:
