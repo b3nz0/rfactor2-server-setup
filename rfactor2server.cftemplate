@@ -351,6 +351,7 @@ Parameters:
       size.
   KeyNameParameter:
     Type: String
+    Default: rf2_server
     Description: Enter the keyname of your private key
   DiscSizeParameter:
     Type: Number
